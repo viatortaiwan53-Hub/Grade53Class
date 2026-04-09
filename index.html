@@ -279,6 +279,108 @@
     font-family: 'Noto Sans TC', sans-serif;
   }
   .jump-pill:hover { background: var(--sage-dark); color: white; border-color: var(--sage-dark); }
+  <style>
+  .photo-section {
+    padding: 0 8vw 5rem;
+  }
+  .album-card {
+    background: linear-gradient(to right, #ffffff, #f0f4f8);
+    border-radius: 20px;
+    border: 1px dashed var(--sage);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    box-shadow: var(--shadow);
+  }
+  .album-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .album-icon {
+    font-size: 2.5rem;
+    background: #00c300; /* LINE Green */
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    color: white;
+  }
+  .album-info h2 {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 1.5rem;
+    color: var(--sage-dark);
+  }
+  .album-info p {
+    font-size: 0.9rem;
+    color: var(--text-mid);
+  }
+  .album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .btn-album {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border: 1px solid #00c300;
+    color: #009900;
+    padding: 0.8rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.3s;
+  }
+  .btn-album:hover {
+    background: #00c300;
+    color: white;
+    transform: translateY(-2px);
+  }
+  .contact-box {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: rgba(200,151,58,0.05);
+    border-radius: 10px;
+    font-size: 0.85rem;
+    color: var(--text-dark);
+    border-left: 4px solid var(--amber);
+  }
+</style>
+
+<div class="photo-section">
+  <div class="section-header">
+    <span class="section-label-sm">📸 珍藏相簿</span>
+    <span class="section-count">共 140 本相簿</span>
+  </div>
+
+  <div class="album-card">
+    <div class="album-header">
+      <div class="album-icon">LINE</div>
+      <div class="album-info">
+        <h2>2026.03.22 同學會 65級50週年照片集</h2>
+        <p>完整收錄同學會當日 140 本精彩相簿紀錄</p>
+      </div>
+    </div>
+
+    <div class="album-grid">
+      <a href="mailto:ViatorTaiwan53@gmail.com" class="btn-album">📁 開啟相簿 (1 - 70)</a>
+      <a href="mailto:ViatorTaiwan53@gmail.com" class="btn-album">📁 開啟相簿 (71 - 140)</a>
+    </div>
+
+    <div class="contact-box">
+      <strong>📩 存取說明：</strong><br>
+      照片集儲存於專屬空間，如需查看或下載原始畫質照片，請聯繫管理員信箱：
+      <a href="mailto:ViatorTaiwan53@gmail.com" style="color: var(--sage-dark); font-weight: 700;">ViatorTaiwan53@gmail.com</a>
+    </div>
+  </div>
+</div>
   /* ── FOOTER ── */
   footer {
     background: var(--deep-brown); color: rgba(255,255,255,0.65);
