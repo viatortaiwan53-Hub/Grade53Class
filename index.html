@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -30,6 +29,7 @@
     font-family: 'Noto Sans TC', sans-serif;
     overflow-x: hidden;
   }
+
   /* ── NAV ── */
   .topnav {
     position: sticky; top: 0; z-index: 100;
@@ -59,6 +59,7 @@
     transition: gap .2s;
   }
   .topnav-back:hover { gap: .7rem; }
+
   /* ── HERO ── */
   .hero {
     background: linear-gradient(135deg, #1E3A5F 0%, #2A5080 45%, #1A2E4A 100%);
@@ -87,31 +88,31 @@
     font-size: clamp(1.8rem, 3.5vw, 2.8rem);
     font-weight: 700; color: #FFFFFF;
     line-height: 1.3; margin-bottom: .9rem;
-    animation: fadeUp .6s .1s ease both; opacity: 0;
+    animation: fadeUp .6s .1s ease both;
     animation-fill-mode: both;
   }
   .hero h1 em { font-style: normal; color: var(--amber); }
   .hero p {
     font-size: .97rem; color: rgba(255,255,255,0.78);
     max-width: 560px; line-height: 1.85;
-    animation: fadeUp .6s .2s ease both; opacity: 0;
+    animation: fadeUp .6s .2s ease both;
     animation-fill-mode: both;
   }
+
   /* ── FETCH STATUS ── */
   .fetch-status {
-    margin: 0 8vw;
+    margin: 1.2rem 8vw 0;
     padding: .7rem 1.2rem;
     border-radius: 50px;
     font-size: .78rem; font-weight: 500;
     display: none; align-items: center; gap: .5rem;
     width: fit-content;
-    margin-top: 1.2rem;
   }
   .fetch-status.loading {
     display: flex;
-    background: rgba(123,158,135,0.12);
+    background: rgba(91,127,166,0.12);
     color: var(--sage-dark);
-    border: 1px solid rgba(123,158,135,0.25);
+    border: 1px solid rgba(91,127,166,0.25);
   }
   .fetch-status.done {
     display: flex;
@@ -127,12 +128,13 @@
   }
   .spinner {
     width: 14px; height: 14px;
-    border: 2px solid rgba(77,122,90,0.2);
+    border: 2px solid rgba(30,58,95,0.2);
     border-top-color: var(--sage-dark);
     border-radius: 50%;
     animation: spin .7s linear infinite;
   }
   @keyframes spin { to { transform: rotate(360deg); } }
+
   /* ── STATS BAR ── */
   .stats-bar {
     padding: 1.5rem 8vw;
@@ -146,7 +148,8 @@
   .stat-desc { font-size: .78rem; color: var(--text-light); line-height: 1.4; }
   .stat-desc strong { color: var(--text-mid); display: block; }
   .stat-divider { width: 1px; height: 32px; background: var(--border); }
-  /* ── GRID ── */
+
+  /* ── VIDEO SECTION ── */
   .video-section {
     padding: .5rem 8vw 5rem;
   }
@@ -161,7 +164,7 @@
   }
   .section-count {
     font-size: .8rem; color: var(--text-light);
-    background: rgba(123,158,135,0.1);
+    background: rgba(91,127,166,0.1);
     padding: .25rem .7rem; border-radius: 50px;
   }
   .video-grid {
@@ -169,6 +172,7 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1.6rem;
   }
+
   /* ── VIDEO CARD ── */
   .video-card {
     background: white; border-radius: 20px;
@@ -178,7 +182,7 @@
   }
   .video-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 16px 40px rgba(61,43,26,0.13);
+    box-shadow: 0 16px 40px rgba(15,35,64,0.13);
     border-color: var(--sage-light);
   }
   .video-embed-wrap {
@@ -204,12 +208,6 @@
     font-size: .95rem; font-weight: 700; color: var(--text-dark);
     line-height: 1.45;
   }
-  .video-title.loading-title {
-    color: var(--text-light);
-    font-weight: 400;
-    font-style: italic;
-  }
-  /* skeleton shimmer */
   .title-skeleton {
     height: 1em; border-radius: 4px;
     background: linear-gradient(90deg, #eaeff5 25%, #dce4ed 50%, #eaeff5 75%);
@@ -243,14 +241,15 @@
   .btn-yt svg { width: 14px; height: 14px; fill: white; flex-shrink: 0; }
   .btn-share {
     display: inline-flex; align-items: center; gap: .3rem;
-    background: rgba(123,158,135,0.12);
-    border: 1.5px solid rgba(123,158,135,0.25);
+    background: rgba(91,127,166,0.12);
+    border: 1.5px solid rgba(91,127,166,0.25);
     color: var(--sage-dark); padding: .45rem .9rem;
     border-radius: 50px; font-size: .78rem; font-weight: 600;
     cursor: pointer; font-family: 'Noto Sans TC', sans-serif;
     transition: all .25s; text-decoration: none;
   }
   .btn-share:hover { background: var(--sage-dark); color: white; border-color: var(--sage-dark); }
+
   /* ── FEATURED ── */
   .video-card.featured { grid-column: span 2; }
   .video-card.featured .video-embed-wrap { padding-top: 42%; }
@@ -259,6 +258,7 @@
     .video-card.featured { grid-column: span 1; }
     .video-card.featured .video-embed-wrap { padding-top: 56.25%; }
   }
+
   /* ── PLAYLIST QUICK JUMP ── */
   .playlist-jump {
     background: white; border-radius: 20px;
@@ -279,10 +279,9 @@
     font-family: 'Noto Sans TC', sans-serif;
   }
   .jump-pill:hover { background: var(--sage-dark); color: white; border-color: var(--sage-dark); }
-  <style>
-  .photo-section {
-    padding: 0 8vw 5rem;
-  }
+
+  /* ── PHOTO SECTION ── */
+  .photo-section { padding: 0 8vw 5rem; }
   .album-card {
     background: linear-gradient(to right, #ffffff, #f0f4f8);
     border-radius: 20px;
@@ -293,154 +292,56 @@
     gap: 1.2rem;
     box-shadow: var(--shadow);
   }
-  .album-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
+  .album-header { display: flex; align-items: center; gap: 1rem; }
   .album-icon {
-    font-size: 2.5rem;
-    background: #00c300; /* LINE Green */
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-    color: white;
+    font-size: .85rem; font-weight: 700;
+    background: #00c300; width: 60px; height: 60px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 15px; color: white; flex-shrink: 0;
+    letter-spacing: .03em;
   }
   .album-info h2 {
     font-family: 'Noto Serif TC', serif;
-    font-size: 1.5rem;
-    color: var(--sage-dark);
+    font-size: 1.5rem; color: var(--sage-dark); margin: 0;
   }
-  .album-info p {
-    font-size: 0.9rem;
-    color: var(--text-mid);
-  }
+  .album-info p { font-size: .9rem; color: var(--text-mid); margin: 5px 0 0; }
   .album-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-top: 1rem;
+    gap: 1rem; margin-top: 1rem;
   }
   .btn-album {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: white;
-    border: 1px solid #00c300;
-    color: #009900;
-    padding: 0.8rem;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.85rem;
-    transition: all 0.3s;
-  }
-  .btn-album:hover {
-    background: #00c300;
-    color: white;
-    transform: translateY(-2px);
-  }
-  .contact-box {
-    margin-top: 1.5rem;
-    padding: 1rem;
-    background: rgba(200,151,58,0.05);
-    border-radius: 10px;
-    font-size: 0.85rem;
-    color: var(--text-dark);
-    border-left: 4px solid var(--amber);
-  }
-  /* 將這段放在原本的 </style> 之前 */
-.photo-section { padding: 0 8vw 5rem; }
-.album-card {
-    background: linear-gradient(to right, #ffffff, #f0f4f8);
-    border-radius: 20px;
-    border: 1px dashed var(--sage);
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-    box-shadow: var(--shadow);
-}
-.album-header { display: flex; align-items: center; gap: 1rem; }
-.album-icon {
-    font-size: 1.2rem; background: #00c300; width: 60px; height: 60px;
-    display: flex; align-items: center; justify-content: center;
-    border-radius: 15px; color: white; font-weight: bold;
-}
-.album-info h2 { font-family: 'Noto Serif TC', serif; font-size: 1.5rem; color: var(--sage-dark); margin: 0; }
-.album-info p { font-size: 0.9rem; color: var(--text-mid); margin: 5px 0 0; }
-.album-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem; }
-.btn-album {
     display: flex; align-items: center; justify-content: center;
     background: white; border: 1px solid #00c300; color: #009900;
-    padding: 0.8rem; border-radius: 12px; text-decoration: none;
-    font-weight: 600; font-size: 0.85rem; transition: all 0.3s;
-}
-.btn-album:hover { background: #00c300; color: white; transform: translateY(-2px); }
-.contact-box {
-    margin-top: 1.5rem; padding: 1rem; background: rgba(200,151,58,0.05);
-    border-radius: 10px; font-size: 0.85rem; color: var(--text-dark); border-left: 4px solid var(--amber);
-}
-</style>
+    padding: .8rem; border-radius: 12px; text-decoration: none;
+    font-weight: 600; font-size: .85rem; transition: all .3s; gap: .4rem;
+  }
+  .btn-album:hover { background: #00c300; color: white; transform: translateY(-2px); }
+  .contact-box {
+    margin-top: 1.5rem; padding: 1rem;
+    background: rgba(200,151,58,0.05);
+    border-radius: 10px; font-size: .85rem;
+    color: var(--text-dark); border-left: 4px solid var(--amber);
+    line-height: 1.7;
+  }
+  .contact-box a { color: var(--sage-dark); font-weight: 700; }
 
-<div class="photo-section">
-  <div class="section-header">
-    <span class="section-label-sm">📸 珍藏相簿</span>
-    <span class="section-count">共 140 本相簿</span>
-  </div>
-<iframe src="https://drive.google.com/file/d/1cjLWnOWoxnrr6jaQXfNf4RdCS6EQpBL3/view?usp=sharing" width="640" height="480"></iframe>
-https://drive.google.com/file/d/1cjLWnOWoxnrr6jaQXfNf4RdCS6EQpBL3/view?usp=sharing
-  
-  <div class="album-card">
-    <div class="album-header">
-      <div class="album-icon">LINE</div>
-      <div class="album-info">
-        <h2>2026.03.22 同學會 65級50週年照片集</h2>
-        <p>完整收錄同學會當日 140 本精彩相簿紀錄</p>
-      </div>
-    </div>
-<iframe src="https://drive.google.com/file/d/您的檔案ID/preview" width="640" height="480"></iframe>
-    <iframe src="https://drive.google.com/file/d/1bZwIPqQMhPuZ7o6CiIV9CavL1b-qWKeT/view?usp=sharing" width="640" height="480"></iframe>
-    <div class="album-grid">
-      <a href="mailto:ViatorTaiwan53@gmail.com" class="btn-album">📁 開啟相簿 (1 - 70)</a>
-      <a href="https://drive.google.com/file/d/1cjLWnOWoxnrr6jaQXfNf4RdCS6EQpBL3/view?usp=drive_link">📁 照片集</a>
-      <a href="mailto:ViatorTaiwan53@gmail.com" class="btn-album">📁 開啟相簿 (71 - 140)</a>
-    </div>
+  /* ── ALBUM OPEN BUTTON ── */
+  .btn-open-album {
+    display: inline-flex; align-items: center; gap: .6rem;
+    background: var(--sage-dark); color: white;
+    padding: .8rem 1.6rem; border-radius: 50px;
+    font-size: .9rem; font-weight: 700;
+    text-decoration: none; letter-spacing: .03em;
+    transition: all .25s; border: none; cursor: pointer;
+    font-family: 'Noto Sans TC', sans-serif;
+  }
+  .btn-open-album:hover {
+    background: #2A5080;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(30,58,95,0.3);
+  }
 
-    <div class="contact-box">
-      <strong>📩 存取說明：</strong><br>
-      照片集儲存於專屬空間，如需查看或下載原始畫質照片，請聯繫管理員信箱：
-      <a href="mailto:ViatorTaiwan53@gmail.com" style="color: var(--sage-dark); font-weight: 700;">ViatorTaiwan53@gmail.com</a>
-    </div>
-  </div>
-</div>
-  <div class="photo-section">
-  <div class="section-header">
-    <span class="section-label-sm">📸 珍藏相簿</span>
-    <span class="section-count">共 140 本相簿</span>
-  </div>
-  <div class="album-card">
-    <div class="album-header">
-      <div class="album-icon">LINE</div>
-      <div class="album-info">
-        <h2>2026.03.22 同學會 65級50週年照片集</h2>
-        <p>完整收錄同學會當日 140 本精彩相簿紀錄</p>
-      </div>
-    </div>
-    <div class="album-grid">
-      <a href="mailto:ViatorTaiwan53@gmail.com" class="btn-album">📁 開啟相簿 (1 - 70)</a>
-      <a href="mailto:ViatorTaiwan53@gmail.com" class="btn-album">📁 開啟相簿 (71 - 140)</a>
-    </div>
-    <div class="contact-box">
-      <strong>📩 存取說明：</strong><br>
-      照片集儲存於專屬空間，如需查看或下載原始畫質照片，請聯繫管理員信箱：
-      <a href="mailto:ViatorTaiwan53@gmail.com" style="color: var(--sage-dark); font-weight: 700;">ViatorTaiwan53@gmail.com</a>
-    </div>
-  </div>
-</div>
   /* ── FOOTER ── */
   footer {
     background: var(--deep-brown); color: rgba(255,255,255,0.65);
@@ -453,9 +354,11 @@ https://drive.google.com/file/d/1cjLWnOWoxnrr6jaQXfNf4RdCS6EQpBL3/view?usp=shari
   }
   footer .f-logo span { color: var(--amber); }
   footer a { color: var(--sage-light); text-decoration: none; }
+
   /* ── TOAST ── */
   .toast {
-    position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%) translateY(2rem);
+    position: fixed; bottom: 2rem; left: 50%;
+    transform: translateX(-50%) translateY(2rem);
     background: var(--text-dark); color: white;
     padding: .7rem 1.5rem; border-radius: 50px;
     font-size: .82rem; font-weight: 500;
@@ -464,6 +367,7 @@ https://drive.google.com/file/d/1cjLWnOWoxnrr6jaQXfNf4RdCS6EQpBL3/view?usp=shari
     white-space: nowrap;
   }
   .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
   /* ── ANIMATIONS ── */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(16px); }
@@ -473,6 +377,7 @@ https://drive.google.com/file/d/1cjLWnOWoxnrr6jaQXfNf4RdCS6EQpBL3/view?usp=shari
 </style>
 </head>
 <body>
+
 <!-- NAV -->
 <nav class="topnav">
   <a class="topnav-logo" href="#">衛道<span>·</span>丁班</a>
@@ -483,11 +388,10 @@ https://drive.google.com/file/d/1cjLWnOWoxnrr6jaQXfNf4RdCS6EQpBL3/view?usp=shari
   </div>
   <span class="topnav-back" style="cursor:default;">2026.03.22</span>
 </nav>
+
 <!-- HERO -->
 <header class="hero">
-  <div class="hero-badge">
-    🎓 衛道中學・53年級丁班
-  </div>
+  <div class="hero-badge">🎓 衛道中學・53年級丁班</div>
   <h1>同學會<em>回憶</em>影片集</h1>
   <p>2026年3月22日，闊別多年再相聚。這裡收錄了同學會當天的珍貴影片，留住每一個歡笑與感動的瞬間。</p>
 </header>
@@ -529,6 +433,40 @@ https://drive.google.com/file/d/1cjLWnOWoxnrr6jaQXfNf4RdCS6EQpBL3/view?usp=shari
   <div class="video-grid" id="video-grid"></div>
 </div>
 
+<!-- PHOTO SECTION -->
+<div class="photo-section">
+  <div class="section-header">
+    <span class="section-label-sm">📸 珍藏相簿</span>
+    <span class="section-count">共 140 本相簿</span>
+  </div>
+  <div class="album-card">
+    <div class="album-header">
+      <div class="album-icon">LINE</div>
+      <div class="album-info">
+        <h2>2026.03.22 同學會 65級50週年照片集</h2>
+        <p>完整收錄同學會當日 140 本精彩相簿紀錄</p>
+      </div>
+    </div>
+
+    <!-- Open album page in new tab (replaces broken iframe) -->
+    <a href="https://viatortaiwan53-hub.github.io/Grade53Class/photos.html"
+       target="_blank" rel="noopener" class="btn-open-album">
+      📸 開啟完整照片集頁面
+    </a>
+
+    <div class="album-grid">
+      <a href="mailto:ViatorTaiwan53@gmail.com" class="btn-album">📁 開啟相簿 (1–70)</a>
+      <a href="mailto:ViatorTaiwan53@gmail.com" class="btn-album">📁 開啟相簿 (71–140)</a>
+    </div>
+
+    <div class="contact-box">
+      <strong>📩 存取說明：</strong><br>
+      照片集儲存於專屬空間，如需查看或下載原始畫質照片，請聯繫管理員信箱：
+      <a href="mailto:ViatorTaiwan53@gmail.com">ViatorTaiwan53@gmail.com</a>
+    </div>
+  </div>
+</div>
+
 <!-- FOOTER -->
 <footer>
   <span class="f-logo">衛道<span>·</span>丁班</span>
@@ -564,7 +502,6 @@ const videos = [
 
 const ytIcon = `<svg viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>`;
 
-// Render quick-jump pills
 const pillsWrap = document.getElementById('jump-pills');
 videos.forEach(v => {
   const a = document.createElement('a');
@@ -574,7 +511,6 @@ videos.forEach(v => {
   pillsWrap.appendChild(a);
 });
 
-// Render skeleton cards first
 const grid = document.getElementById('video-grid');
 videos.forEach((v, i) => {
   const card = document.createElement('div');
@@ -606,9 +542,7 @@ videos.forEach((v, i) => {
   grid.appendChild(card);
 });
 
-// Fetch titles via YouTube oEmbed (CORS-safe, no API key needed)
 const statusEl = document.getElementById('fetch-status');
-statusEl.className = 'fetch-status loading';
 
 async function fetchTitle(videoId) {
   const url = `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${videoId}&format=json`;
@@ -624,42 +558,26 @@ async function fetchAllTitles() {
     try {
       const title = await fetchTitle(v.id);
       const el = document.getElementById(`title-${v.id}`);
-      if (el) {
-        el.innerHTML = '';
-        el.textContent = title;
-        el.classList.remove('loading-title');
-      }
+      if (el) { el.innerHTML = ''; el.textContent = title; }
       successCount++;
     } catch (e) {
       const el = document.getElementById(`title-${v.id}`);
-      if (el) {
-        el.innerHTML = '';
-        el.textContent = `影片 ${v.num}`;
-        el.classList.remove('loading-title');
-      }
+      if (el) { el.innerHTML = ''; el.textContent = `影片 ${v.num}`; }
     }
   });
-
   await Promise.allSettled(promises);
-
-  if (successCount === videos.length) {
-    statusEl.className = 'fetch-status done';
-    statusEl.innerHTML = `<span>✅</span><span>已成功載入所有 ${videos.length} 部影片標題</span>`;
-  } else if (successCount > 0) {
+  if (successCount > 0) {
     statusEl.className = 'fetch-status done';
     statusEl.innerHTML = `<span>✅</span><span>已載入 ${successCount} / ${videos.length} 部影片標題</span>`;
   } else {
     statusEl.className = 'fetch-status error';
     statusEl.innerHTML = `<span>⚠️</span><span>無法自動抓取標題，請手動填入</span>`;
   }
-
   setTimeout(() => { statusEl.style.opacity = '0'; statusEl.style.transition = 'opacity .6s'; }, 3000);
   setTimeout(() => { statusEl.style.display = 'none'; }, 3600);
 }
-
 fetchAllTitles();
 
-// Toast
 function showToast(msg) {
   const t = document.getElementById('toast');
   t.textContent = msg;
